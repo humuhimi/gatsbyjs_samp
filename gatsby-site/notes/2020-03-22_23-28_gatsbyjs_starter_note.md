@@ -68,3 +68,10 @@ useStaticQuery, graphql
 ---
 yarn add env-cmdで環境変数を変更する
 end-cmdがうまく行かない? 急ぎならcross-cmd試す
+
+
+# 次はここから
+
+(gatsbyJs)[https://www.youtube.com/watch?v=8t0vNu2fCCM]
+10. Sourcing Content from the File System
+  - Timestamp: 1:51:32
