@@ -39,3 +39,32 @@ chirdren→ <h1>Its sample page</h1>
 header.jsにはheader.scssを入れる
 
 Link にはclassNameを
+
+-
+- [cssのflexboxについて](https://coliss.com/articles/build-websites/operation/css/css3-flexbox-properties-by-scotch.html)
+
+justify contentもflexboxと同じく何かしら並びをどうこうするもの
+
+-
+nav itemを右寄せにしたい時
+margin-right: auto
+
+- graphiqlを使う場合はこれを使う
+useStaticQuery, graphql
+
+```javascript
+// 内部の情報にアクセス
+  const data = useStaticQuery(graphql`
+    query SiteTitleQuery {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
+```
+
+---
+yarn add env-cmdで環境変数を変更する
+end-cmdがうまく行かない? 急ぎならcross-cmd試す

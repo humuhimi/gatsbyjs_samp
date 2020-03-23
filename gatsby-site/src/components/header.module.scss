@@ -1,4 +1,26 @@
+.header{
+    padding: 1rem 0 1rem;
+    background: rebeccapurple;
+    margin-bottom : 1.45rem;
+}
+
+.nav-list {
+    display: flex-end;
+    list-style-type: none;
+    
+}
+
+.nav-item {
+    float: right;
+    color: white;
+    font-size: .9rem;
+    margin-right: 1.3rem;
+    text-decoration: none;
+}
+.active-nav-item {
+    color: paleturquoise;
+}
 .link {
-    color: blue;
+    color: white;
     text-decoration: none;
 }

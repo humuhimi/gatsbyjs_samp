@@ -4,12 +4,23 @@ import React from "react"
 import headerStyles from "./header.module.scss"
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
+  <header className={headerStyles.header}>
+    <nav>
+      <ul className={headerStyles.navList}>
+        <li>
+          <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/">home</Link>
+        </li>
+        <li>
+          <Link className={headerStyles.navItem}  activeClassName={headerStyles.activeNavItem} to="/sample">sample</Link>
+        </li>
+        <li>
+          <Link className={headerStyles.navItem}  activeClassName={headerStyles.activeNavItem} to="/page-2">page-2</Link>
+        </li>
+        <li>
+          <Link className={headerStyles.navItem}  activeClassName={headerStyles.activeNavItem} to="/404">Error</Link>
+        </li>
+      </ul>
+    </nav>
     <div
       style={{
         margin: `0 auto`,
