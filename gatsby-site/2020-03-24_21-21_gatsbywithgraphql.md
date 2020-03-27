@@ -64,3 +64,39 @@ module.exports.onCreateNode = ({ node, actions }) => {
     "fileAbsolutePath": "/Users/humu/my_projects/gatsbyjs_samp/gatsby-site/src/posts/gatsby.md"
 }
 ```
+
+- graphql
+
+```js
+
+//  String! is a non-nullable string.
+query (
+  $slug:String!
+) {
+  markdownRemark (
+    fields : {
+      slug : {
+        eq :$slug
+      }
+    }
+  ) {
+    frontmatter {
+      title
+    }
+  }
+}
+// +query variable
+{
+  "slug": "react"
+}
+// output
+{
+  "data": {
+    "markdownRemark": {
+      "frontmatter": {
+        "title": "React"
+      }
+    }
+  }
+}
+```
