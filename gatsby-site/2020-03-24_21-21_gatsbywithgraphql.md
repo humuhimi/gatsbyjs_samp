@@ -191,4 +191,10 @@ sudo kill -9 4677
 
 - [graphql内の日付設定について](https://momentjs.com/docs/#/displaying/)
 
+- resolveできないエラーについて
+package.jsonからresolveしてる?
 
+yarn add やnpm installでpackage.jsonに入れている
+
+- graphqlでcontentfulの内容を反映する場合
+gatsby cleanでキャッシュを消しておく

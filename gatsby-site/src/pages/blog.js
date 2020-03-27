@@ -2,6 +2,7 @@ import React from "react"
 import { graphql,useStaticQuery,Link } from 'gatsby'
 import blogStyles from './blog.module.scss'
 
+import SEO from "../components/seo"
 
 import Layout from "../components/layout"
 
@@ -37,6 +38,7 @@ const BlogPage = () => {
         `)
     return(
         <Layout>
+        <SEO title="blog" />
         <h1>Blog</h1>
         <p>後でここに投稿する</p>
         <ol className={blogStyles.posts}>
