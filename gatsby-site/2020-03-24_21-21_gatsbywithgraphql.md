@@ -100,3 +100,86 @@ query (
   }
 }
 ```
+
+- gatsby pluginのresolve流れ
+
+```js
+// plugin~は全体
+// resolveでつなげてoptionで下の層を決めていく
+// gatsby-remark-images系はtransformer-remarkにconfigされる
+`gatsby-plugin-sharp`,
+{
+  resolve:`gatsby-transformer-remark`,
+  options: {
+    plugins: {
+      `gatsby-remark-relative-images`,
+      {
+        resolve: `gatsby-remark-images`,
+        options: {
+          maxWidth:750,
+          linkImagesToOriginal: false
+        }
+      }
+    }
+  }
+}
+// 
+gatsby-plugin-manifestはplugins: [からつながっている
+
+
+// ドキュメントちゃんと見る
+
+ {
+    resolve: `gatsby-transformer-remark`,
+    options: {
+      plugins: [
+        // gatsby-remark-relative-images must
+        // go before gatsby-remark-images
+        {
+          resolve: `gatsby-remark-relative-images`,
+        },
+        {
+          resolve: `gatsby-remark-images`,
+          options: {
+            // It's important to specify the maxWidth (in pixels) of
+            // the content container as this plugin uses this as the
+            // base for generating different widths of each image.
+            maxWidth: 590,
+          },
+        },
+      ],
+    },
+  },
+```
+
+```js
+npm install gatsby-remark-relative-images,gatsby-remark-images
+↓
+    `gatsby-plugin-sharp`,
+    {
+      resolve:`gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+         resolve: `gatsby-remark-relative-images`,
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth:750,
+              linkImagesToOriginal: false,
+            },
+          },
+        ],
+      },
+    },
+↓
+エラー
+---
+↓
+react,react-dom,gatsbyをuninstall or upgarade
+// 複数のプロジェクトのreactとかgatsbyが競合している場合に生じる?
+→npm ls reactで依存関係は解決できた
+```
+sudo lsof -P -i:8000
+sudo kill -9 4677 <br /> これでポートを確認して切ることができる
