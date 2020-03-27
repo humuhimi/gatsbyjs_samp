@@ -182,4 +182,13 @@ react,react-dom,gatsbyをuninstall or upgarade
 →npm ls reactで依存関係は解決できた
 ```
 sudo lsof -P -i:8000
-sudo kill -9 4677 <br /> これでポートを確認して切ることができる
+sudo kill -9 4677 
+ これでポートを確認して切ることができる
+
+-  node_modules/gatsby-source-contentful/src/fragments.jsは画像用のcontentfulが自動で入れられているだけ
+
+消したらエラー消える
+
+- [graphql内の日付設定について](https://momentjs.com/docs/#/displaying/)
+
+
