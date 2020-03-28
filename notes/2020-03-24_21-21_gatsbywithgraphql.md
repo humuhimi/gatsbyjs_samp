@@ -198,3 +198,16 @@ yarn add やnpm installでpackage.jsonに入れている
 
 - graphqlでcontentfulの内容を反映する場合
 gatsby cleanでキャッシュを消しておく
+
+- envについて
+
+.env.developmentに
+GATSBY_GRAPHQL_IDE=playground
+CONTENTFUL_SPACE_ID=~~~
+CONTENTFUL_ACCESS_TOKEN=~~~
+
+という感じ
+netlify時は
+variableに
+CONTENTFUL_SPACE_ID=~~~
+CONTENTFUL_ACCESS_TOKEN=~~~を追加

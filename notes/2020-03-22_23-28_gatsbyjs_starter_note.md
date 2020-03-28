@@ -70,5 +70,3 @@ yarn add env-cmdで環境変数を変更する
 end-cmdがうまく行かない? 急ぎならcross-cmd試す
 
 ---
-
-- *graphQL playground設定する
