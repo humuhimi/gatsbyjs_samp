@@ -211,3 +211,22 @@ netlify時は
 variableに
 CONTENTFUL_SPACE_ID=~~~
 CONTENTFUL_ACCESS_TOKEN=~~~を追加
+
+
+- gatsby jsの流れ
+
+commponents
+  →header.js
+    →gatsby
+    →react
+    →scss
+      →header.module.scss
+    →prop-types
+      →--
+      　Header.propTypes = {
+          siteTitle: PropTypes.string,
+        　}
+      　--
+          →Header = ({ siteTitle }) //PropTypes.string<型指定に使われる>
+          　→layout.js内部(<Header siteTitle={data.site.siteMetadata.title} />)
+          
