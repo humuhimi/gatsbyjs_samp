@@ -230,3 +230,29 @@ commponents
           →Header = ({ siteTitle }) //PropTypes.string<型指定に使われる>
           　→layout.js内部(<Header siteTitle={data.site.siteMetadata.title} />)
           
+componentsのindex.jsxにその他のconponentsが全て統合されている
+ →なぜどこでも呼び出されてない?　なんのための統合?
+
+404ページから攻める
+  →headerから攻める
+   →layout/layout.jsxの構造
+
+
+```jsx
+  <ThemeProvider theme={theme}>　// <-from emotion
+    theme <- config/theme.js(cssデザインについて)
+
+
+```
+
+
+
+global cssとは　全体に対応するもの *とかaとかh1とかbodyとか
+
+${}は``内で変数使う場合
+`string text ${expression} string text`
+
+PropTypes.oneOfType([PropTypes.string, PropTypes.array])で配列か文字列か求められる
+
+
+
